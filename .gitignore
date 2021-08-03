@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# fits files
+*.fits
+
+# images
+*.tif
+
 # Distribution / packaging
 .Python
 build/
