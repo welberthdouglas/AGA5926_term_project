@@ -11,6 +11,11 @@ __pycache__/
 
 # images
 *.tif
+*.fz
+*.gz
+
+# ds store 
+*.DS_Store
 
 # Distribution / packaging
 .Python
