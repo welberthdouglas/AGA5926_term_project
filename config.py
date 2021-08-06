@@ -1,1 +1,1 @@
-SAVE_PATH = "data/fits/"
+DATA_DIR = "data/fits/"
