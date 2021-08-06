@@ -120,7 +120,7 @@ def normalize(fits_data:np.array)->np.array:
     
     return num/den
 
-def normalize_individual_channel(fits_data:np.array)->np.array:
+def normalize_individual_channels(fits_data:np.array)->np.array:
     """
     takes a np.array of shape = (K,n,n,3) and return its normalized form in all chan
     where K is the number of images
@@ -152,5 +152,26 @@ def fits_processing(fits_data:np.array, mult:float=10)->np.array:
     
     return normalize(shrinked)
 
-    
+def save_images(splus_image, legacy_image, generated_image, path):
+    """
+    Save low-resolution, high-resolution(original) and
+    generated high-resolution images in a single image
+    """
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 3, 1)
+    ax.imshow(low_resolution_image)
+    ax.axis("off")
+    ax.set_title("SPLUS")
+
+    ax = fig.add_subplot(1, 3, 2)
+    ax.imshow(original_image)
+    ax.axis("off")
+    ax.set_title("LEGACY")
+
+    ax = fig.add_subplot(1, 3, 3)
+    ax.imshow(generated_image)
+    ax.axis("off")
+    ax.set_title("Generated")
+
+    plt.savefig(path) 
     
