@@ -3,6 +3,7 @@ import requests
 import getpass
 import splusdata
 import glob
+import random
 from tqdm import tqdm
 
 from astropy.io import fits
@@ -32,6 +33,15 @@ def get_fits_splus(ra:float,dec:float,conn,save_path:str,size:int=128,bands:list
     fits_data = [conn.get_cut(ra, dec, 128, band)[1].data for band in bands]
     hdu = fits.PrimaryHDU(np.stack(fits_data, axis=0))
     hdu.writeto(f'{save_path}RA{ra}_DEC{dec}_SPLUS.fits', overwrite=True)
+    
+def add_random_offset(coords:list, offset:float=0.005) -> list:
+    """
+    randomly adds a offset in RA and DEC in a list of coordinates
+    """
+    coords_offset_RA = [[round(i[0]+offset,4),i[1]] if random.random()<0.25 else i for i in coords]
+    coords_offset_RA_DEC = [[i[0],round(i[1]-offset,4)] if random.random()<0.25 else i for i in coords_offset_RA]  
+    
+    return coords_offset_RA_DEC
 
 def download_data(coords:list,save_path:str) -> None:
     """
@@ -39,6 +49,8 @@ def download_data(coords:list,save_path:str) -> None:
     """
     print("establishing connection to splus ...")
     conn = splus_conn()
+    
+    coords = add_random_offset(coords)
     
     print("downloading splus data ...")
     for ra,dec in tqdm(coords):
