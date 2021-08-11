@@ -73,22 +73,30 @@ def sample_fits(data_dir:str, batch_size:int) -> tuple:
     return np.stack(splus_fits_data),np.stack(legacy_fits_data)
 
 
-def data_augmentation(fits_data:list) -> np.array:
+def data_augmentation(fits_data:list, augmentation_factor = 4) -> np.array:
     """
     performs data augmentation in a list of np.arrays and return a np.array with the original data plus the
     following transformations: flipup, fliplr and rotation 90 degrees counter clock wise
+    augmentation factor: [0,2,3,4]
     """
     
     fits_data = np.stack(fits_data)
     
     if len(fits_data.shape)==3:
         fits_data = np.expand_dims(fits_data, axis=0)
-        
+    
+    if augmentation_factor == 0:
+        return fits_data
+    
     fits_UD = np.flip(fits_data, axis=1)
     fits_LR = np.flip(fits_data, axis=2)
     fits_ROT90 = np.rot90(fits_data, axes=[1,2])
+    
+    augmentated_data = {2:[fits_data,fits_UD],
+                        3:[fits_data,fits_UD,fits_LR],
+                        4:[fits_data,fits_UD,fits_LR,fits_ROT90]}
         
-    return np.concatenate([fits_data,fits_UD,fits_LR,fits_ROT90],axis=0)    
+    return np.concatenate(augmentated_data[augmentation_factor],axis=0)    
 
 
 def plot_GRZ_histogram(fits_data:np.array, xscale:str="log", figsize = (15,5), bins=1000)->None:
@@ -157,14 +165,14 @@ def save_images(splus_image, legacy_image, generated_image, path):
     Save low-resolution, high-resolution(original) and
     generated high-resolution images in a single image
     """
-    fig = plt.figure()
+    fig = plt.figure(20,20)
     ax = fig.add_subplot(1, 3, 1)
-    ax.imshow(low_resolution_image)
+    ax.imshow(splus_image)
     ax.axis("off")
     ax.set_title("SPLUS")
 
     ax = fig.add_subplot(1, 3, 2)
-    ax.imshow(original_image)
+    ax.imshow(legacy_image)
     ax.axis("off")
     ax.set_title("LEGACY")
 
