@@ -13,6 +13,7 @@ __pycache__/
 *.tif
 *.fz
 *.gz
+*.png
 
 # ds store 
 *.DS_Store
