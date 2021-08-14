@@ -1,4 +1,6 @@
 DATA_DIR = "data/fits/"
+IMAGES_DIR = "data/images/"
 EPOCHS = 30000
 BATCH_SIZE = 1
 AUGMENTATION_FACTOR = 4
+SEED = 42
