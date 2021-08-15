@@ -101,8 +101,8 @@ def sample_fits(data_dir:str, batch_size:int) -> tuple:
     coords = []
 
     for s_fits,l_fits in zip(fits_splus_batch,fits_legacy_batch):
-        splus_fits_data.append(fits.open(s_fits)[0].data.swapaxes(0,2))
-        legacy_fits_data.append(fits.open(l_fits)[0].data.swapaxes(0,2))
+        splus_fits_data.append(fits.open(s_fits, memmap=False)[0].data.swapaxes(0,2))
+        legacy_fits_data.append(fits.open(l_fits, memmap=False)[0].data.swapaxes(0,2))
         coords.append([s_fits.split("_")[1],s_fits.split("_")[3]])
         
     return np.stack(splus_fits_data),np.stack(legacy_fits_data),coords
