@@ -17,7 +17,7 @@ def train_GAN(generator,
     step = 0
     for epoch in range(epochs):
         print(f"Epoch:{epoch}")
-        for i in range(batches_per_epoch):
+        for i in tqdm(range(batches_per_epoch)):
     
             """
             Train the discriminator network
