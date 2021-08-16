@@ -1,5 +1,5 @@
 <div align="center">
-    <h3>Using SRGANs to Improve S-PLUS Images Quality</h3>
+    <h2>Using SRGANs to Improve S-PLUS Images Quality</h2>
 </div>
 
 ### Abstract
