@@ -1,3 +1,3 @@
-# Using SRGANs to improve S-PLUS images quality
+# Using SRGANs to improve S-PLUS images quality <p align="center">
 
-## Abstract
+## Abstract <p align="center">
