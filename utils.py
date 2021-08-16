@@ -220,21 +220,15 @@ def save_images(splus_image, legacy_image, generated_image, path):
     Save low-resolution, high-resolution(original) and
     generated high-resolution images in a single image
     """
-    fig = plt.figure(20,20)
-    ax = fig.add_subplot(1, 3, 1)
-    ax.imshow(splus_image)
-    ax.axis("off")
-    ax.set_title("SPLUS")
+    fig,ax = plt.subplots(1,3,figsize=(20,20))
+    ax[0].imshow(splus_image)
+    ax[0].set_title("SPLUS")
+    
+    ax[1].imshow(generated_image)
+    ax[1].set_title("SPLUS - SR")
 
-    ax = fig.add_subplot(1, 3, 2)
-    ax.imshow(legacy_image)
-    ax.axis("off")
-    ax.set_title("LEGACY")
-
-    ax = fig.add_subplot(1, 3, 3)
-    ax.imshow(generated_image)
-    ax.axis("off")
-    ax.set_title("Generated")
+    ax[2].imshow(legacy_image)
+    ax[2].set_title("LEGACY")
 
     plt.savefig(path) 
-    
+    plt.close('all')
