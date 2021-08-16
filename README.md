@@ -1,6 +1,5 @@
 <div align="center">
-    <h1>Heading level 1</h1>
-     <b>Using SRGANs to improve S-PLUS images quality </b> </font>
+    <h1>Using SRGANs to improve S-PLUS images quality</h1>
 </div>
 
 #### Abstract
