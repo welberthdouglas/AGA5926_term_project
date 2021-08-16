@@ -9,7 +9,7 @@ import random
 from tqdm import tqdm
 from astropy.io import fits
 
-from config import SEED
+from config import *
 
 random.seed(SEED)
 
@@ -232,3 +232,19 @@ def save_images(splus_image, legacy_image, generated_image, path):
 
     plt.savefig(path) 
     plt.close('all')
+    
+def get_data(data_dir:str = DATA_DIR+"train/",
+             train_size:float = TRAIN_SIZE,
+             augmentation_factor:int = AUGMENTATION_FACTOR)->tuple:
+    
+    # load fits
+    train_splus_fits, train_legacy_fits,_ = sample_fits(data_dir,TRAIN_SIZE)
+    
+    # asinh shrink and normalize
+    train_splus_images,train_legacy_images = fits_processing(train_splus_fits),fits_processing(train_legacy_fits)
+    
+    # perform data augmentation
+    augmented_data = (data_augmentation(train_splus_images, augmentation_factor=augmentation_factor),
+                      data_augmentation(train_legacy_images, augmentation_factor=augmentation_factor))
+    
+    return augmented_data
