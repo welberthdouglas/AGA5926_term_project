@@ -54,7 +54,7 @@ def train_GAN(generator,
             # Write the losses to Tensorboard
             with summary_writer.as_default():
                 tf.summary.scalar('generator_loss', g_loss[0], step=step)
-                tf.summary.scalar('disciminator_loss', d_loss[0], step=step)
+                tf.summary.scalar('discriminator_loss', d_loss[0], step=step)
                 summary_writer.flush()
                 
             step +=1
