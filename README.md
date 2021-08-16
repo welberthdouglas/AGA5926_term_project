@@ -1,1 +1,3 @@
-# AGA5926_term_project
+# Using SRGANs to improve S-PLUS images quality
+
+## Abstract
