@@ -59,8 +59,8 @@ def train_GAN(generator,
                 
             step +=1
         
-        # Sample and save validation images after every 100 epochs
-        if epoch % 100 == 0:
+        # Sample and save validation images after every 10 epochs
+        if epoch % 10 == 0:
             
             with open('validation_data.pkl','rb') as f:
                  splus_val_images,legacy_val_images = pickle.load(f)
@@ -83,8 +83,8 @@ def train_GAN(generator,
                 save_images(low_resolution_images[index], high_resolution_images[index], img,\
                             path="results/img_{}_{}".format(epoch, index))
         
-        # Save model checkpoint after 1000 epochs
-        if epoch % 1000 == 0:
+        # Save model checkpoint after 100 epochs
+        if epoch % 100 == 0:
             generator.save_weights("generator.h5")
             discriminator.save_weights("discriminator.h5")
             
