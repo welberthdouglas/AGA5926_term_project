@@ -17,7 +17,7 @@ def train_GAN(generator,
     step = 0
     for epoch in range(epochs):
         print(f"Epoch:{epoch}")
-        for i in range(batches_per_epoch):
+        for i in tqdm(range(batches_per_epoch)):
     
             """
             Train the discriminator network
@@ -39,7 +39,6 @@ def train_GAN(generator,
         
             # Calculate total discriminator loss
             d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
-            print("d_loss:", d_loss)
         
             """
             Train the generator network
@@ -52,8 +51,6 @@ def train_GAN(generator,
             g_loss = adversarial_model.train_on_batch([splus_images, legacy_images],
                                              [SR_labels, image_features])
         
-            print("g_loss:", g_loss)
-        
             # Write the losses to Tensorboard
             with summary_writer.as_default():
                 tf.summary.scalar('generator_loss', g_loss[0], step=step)
@@ -64,11 +61,20 @@ def train_GAN(generator,
         
         # Sample and save validation images after every 100 epochs
         if epoch % 100 == 0:
-            splus_fits, legacy_fits,_ = sample_fits(DATA_DIR+"validation/",3)
+            
+            with open('validation_data.pkl','rb') as f:
+                 splus_val_images,legacy_val_images = pickle.load(f)
+            
+            #
+            r_index = np.random.choice(range(25), 3, replace = False)
             
             # Asinh Shrink and Normalize images
-            low_resolution_images = fits_processing(splus_fits)
-            high_resolution_images = fits_processing(legacy_fits)
+            low_resolution_images = np.stack([splus_val_images[r_index[0]],
+                                              splus_val_images[r_index[1]],
+                                              splus_val_images[r_index[2]]])
+            high_resolution_images = np.stack([legacy_val_images[r_index[0]],
+                                               legacy_val_images[r_index[1]],
+                                               legacy_val_images[r_index[2]]])
     
             generated_images = generator.predict_on_batch(low_resolution_images)
             generated_images = normalize(generated_images)
