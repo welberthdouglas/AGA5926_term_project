@@ -9,6 +9,10 @@ __pycache__/
 # fits files
 *.fits
 
+#pickles
+*.pkl
+*.pickle
+
 # images
 *.tif
 *.fz
