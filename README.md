@@ -1,6 +1,8 @@
 </p>
 <div align="center">
-<font size="20"> Using SRGANs to improve S-PLUS images quality  </font>
+     <font size="200"> 
+     Using SRGANs to improve S-PLUS images quality 
+     </font>
 </div>
 
 ## Abstract
