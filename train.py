@@ -1,5 +1,6 @@
 from GAN_architecture import *
 from config import *
+from utils import *
 
 
 vgg = build_vgg()
