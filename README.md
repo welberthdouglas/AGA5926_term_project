@@ -1,4 +1,3 @@
-</p>
 <div align="center">
      <font size="200"> 
      Using SRGANs to improve S-PLUS images quality 
