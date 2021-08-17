@@ -27,6 +27,9 @@ Several factors contribute to noise in astronomical images. Random noise from th
 - cite paper solar denoising and its references, maybe use a hybrid architecture with noise reduction capabilities
 - Evaluate generator on more diverse objects, not only galaxies
 - check for consistency using other metrics apart from SNR.
+- Different loss function
+- Features from a different model (not VGG)
+- Check which vgg features get activated with galaxies images
 
 ### 5. References
 
