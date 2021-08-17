@@ -87,13 +87,9 @@ def build_generator():
     gen4 = Conv2D(filters=256, kernel_size=3, strides=1, padding='same')(gen4)
     gen4 = Activation('relu')(gen4)
     
-    # Additional convolution layer
-    gen5 = Conv2D(filters=64, kernel_size=5, strides=1, padding='same')(gen4)
-    gen5 = Activation('tanh')(gen5)
-    
     # Output convolution layer
-    gen6 = Conv2D(filters=3, kernel_size=9, strides=1, padding='same')(gen5)
-    output = Activation('tanh')(gen6)
+    gen5 = Conv2D(filters=3, kernel_size=9, strides=1, padding='same')(gen4)
+    output = Activation('tanh')(gen5)
 
     return Model(inputs=[input_layer], outputs=[output], name='generator')
 
