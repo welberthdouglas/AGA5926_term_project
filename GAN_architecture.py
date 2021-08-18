@@ -87,7 +87,7 @@ def build_generator():
     gen3 = Add()([gen2, gen15])
 
     # Add an upsampling block
-    gen4 = UpSampling2D(size=2)(gen3)
+    gen4 = UpSampling2D(size=2, interpolation='bilinear')(gen3)
     gen4 = Conv2D(filters=256, kernel_size=3, strides=1, padding='same')(gen4)
     gen4 = Activation('relu')(gen4)
     
