@@ -79,8 +79,12 @@ def build_generator():
     gen2 = Conv2D(filters=64, kernel_size=3, strides=1, padding='same')(res)
     gen2 = BatchNormalization(momentum=momentum)(gen2)
 
+    
+    # Add conv to pre residual output
+    gen15 = Conv2D(filters=64, kernel_size=15, strides=1, padding='same', activation='relu')(gen1)
+    
     # Take the sum of the output from the pre-residual block(gen1) and the post-residual block(gen2)
-    gen3 = Add()([gen2, gen1])
+    gen3 = Add()([gen2, gen15])
 
     # Add an upsampling block
     gen4 = UpSampling2D(size=2)(gen3)
