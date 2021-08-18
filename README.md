@@ -30,6 +30,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 - Different loss function
 - Features from a different model (not VGG)
 - Check which vgg features get activated with galaxies images
+- Low frequency artifacts might be caused by the generator trying to mimic legacy images' noise (it is a good idea to check if sone feature in VGG is activated by the noise in images)
 
 ### 5. References
 
