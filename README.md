@@ -37,5 +37,5 @@ Several factors contribute to noise in astronomical images. Random noise from th
 ### 6. Appendix
 
 <p align="center">
-  <img  height="10000" src="./images/validation.png"/>
+  <img  width="300" src="./images/validation.png"/>
 </p>
