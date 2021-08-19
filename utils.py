@@ -238,7 +238,7 @@ def get_data(data_dir:str = DATA_DIR+"train/",
              augmentation_factor:int = AUGMENTATION_FACTOR)->tuple:
     
     # load fits
-    train_splus_fits, train_legacy_fits,_ = sample_fits(data_dir,TRAIN_SIZE)
+    train_splus_fits, train_legacy_fits,_ = sample_fits(data_dir,train_size)
     
     # asinh shrink and normalize
     train_splus_images,train_legacy_images = fits_processing(train_splus_fits),fits_processing(train_legacy_fits)
