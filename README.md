@@ -35,7 +35,11 @@ Several factors contribute to noise in astronomical images. Random noise from th
 ### 5. References
 
 ### 6. Appendix
+#### A.1 Validation Images
+
+The figure X bellow show the validation images along with the respective generated images and images from legacy survey. All objects in this set were chosen randomly from the original collected objects.
 
 <p align="center">
   <img  width="1000" src="./images/validation.png"/>
+  Figure X. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
 </p>
