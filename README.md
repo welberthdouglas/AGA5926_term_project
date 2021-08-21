@@ -65,7 +65,7 @@ The figure A.X bellow show the validation images along with the respective gener
 The figure A.X bellow show a sample of the train images along with the respective generated images and images from legacy survey.
 
 <p align="center">
-  <img  width="1000" src="./images/train.png"/>
+  <img src="./images/train.png"/>
   Figure A.X. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
 </p>
 
