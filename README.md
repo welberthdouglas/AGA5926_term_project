@@ -2,7 +2,9 @@
     <h2>Improving S-PLUS Image Quality with SRGANs</h2>
 </div>
 
-### Abstract
+<div align="center">
+<h3> Abstract </h3>
+</div>
 
 <p align="justify">
 Several factors contribute to noise in astronomical images. Random noise from the sky background, the telescope detector and optical system play a part to build noise in images that can make it difficult to identify and study structures. Schawinski et al. 2017 showed the potential of GANs for noise reduction and recovery of galaxy features for images artificially degraded [add solar denoise paper here]. In this project[work] we will use SRGANs to increase image quality (pixel density and signal to noise ratio) of S-PLUS survey images using deeper images of the same objects from Legacy survey as a baseline for training. Preliminary results were qualitatively evaluated and show good concordance with legacy survey images.
@@ -73,30 +75,32 @@ This project builds upon the work done by Schawinski et al. 2017 and attempts to
 ### 7. Appendix
 #### A.1 Validation Images
 
-The figure A.X bellow show the validation images along with the respective generated images and images from legacy survey. All objects selected to the validation set in were chosen randomly from the original collected objects.
+The figure A.1 bellow show the validation images along with the respective generated images and images from legacy survey. All objects selected to the validation set in were chosen randomly from the original collected objects.
 
 <p align="center">
   <img src="./images/validation.png"/>
-  Figure A.X. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
+  Figure A.1. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
 </p>
 
 #### A.2 Sample of Train Images
 
-The figure A.X bellow show a sample of the train images along with the respective generated images and images from legacy survey.
+The figure A.2 bellow show a sample of the train images along with the respective generated images and images from legacy survey.
 
 <p align="center">
   <img src="./images/train.png"/>
-  Figure A.X. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
+  Figure A.2. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
 </p>
 
-#### A.3 Validation Images
+#### A.3 Limitations of Generated images
+
+The images bellow show detected flaws present in some generated images in the validation set. The possible origin of these flaws could be due to several factors such as network's architecture and loss function, and input images quality. 
 
 <p align="center">
   <img src="./images/limitations_01.png"/>   
-  Figure A.X. 
+  Figure A.3.1. Detected flaws in generated images. Left and Center: Unnatural structures and colors detected in light regions. Right: Very noisy input image resulting in a cloudy output image. 
 </p>
     
 <p align="center">
   <img src="./images/limitations_02.png"/>       
-  Figure A.X. 
+  Figure A.3.2. Low frequency feature present in all generated images.
 </p>
