@@ -75,8 +75,8 @@ This project builds upon the work done by Schawinski et al. (2017) and attempts 
 
 ### 6. References
 
-[Baso, C. J. D. , Rodríguez, J.C., Danilovic, S.. 2019](https://arxiv.org/abs/1908.02815) Solar image denoising with convolutional neural networks.    
-[Goodfelow et al. 2014.](https://arxiv.org/abs/1406.2661) Generative Adversarial Networks.   
+[Baso, C. J. D. , Rodríguez, J.C., Danilovic, S. 2019.](https://arxiv.org/abs/1908.02815) Solar image denoising with convolutional neural networks.    
+[Goodfellow, I. J. , Abadie, J.P., Mirza,M., Xu, B., Farley, D. W., Ozair, S., Courville, A., Bengio A.. 2014.](https://arxiv.org/abs/1406.2661) Generative Adversarial Networks.   
 [Ledig et al. 2017.](https://arxiv.org/abs/1609.04802) Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network.  
 [Fussell and Moews. 2018.](https://arxiv.org/abs/1811.03081) Forging new worlds: high-resolution synthetic galaxies with chained generative adversarial networks.       
 [Li et al. 2020.](https://arxiv.org/abs/2010.06608) AI-assisted super-resolution cosmological simulations.   
