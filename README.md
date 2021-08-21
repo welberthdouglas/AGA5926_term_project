@@ -21,6 +21,8 @@ This project builds upon the work done by Schawinski et al. 2017 and attempts to
 
 #### 2.1 Generative Adversarial Networks
 
+ <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
 #### 2.2 Network Architecture
 <p align="center">
   <img  src="./images/schematics.png"/>   
