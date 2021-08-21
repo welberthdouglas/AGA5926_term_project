@@ -15,12 +15,24 @@ Several factors contribute to noise in astronomical images. Random noise from th
 #### 2.1 Generative Adversarial Networks
 
 #### 2.2 Network Architecture
+<p align="center">
+  <img  height="400" src="./images/schematics.png"/>   
+  Figure 2.X. 
+</p>
 
 #### 2.3 Train Data
 
 ### 3. Results
 
-### 3.X Limitations
+<p align="center">
+  <img  height="400" src="./images/validation_images.png"/>   
+  Figure X. 
+</p>
+
+<p align="center">
+  <img  height="400" src="./images/histogram.png"/>   
+  Figure X. 
+</p>
 
 ### 4. Discussion and Conclusions
 
