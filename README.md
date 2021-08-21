@@ -72,11 +72,11 @@ The figure A.X bellow show a sample of the train images along with the respectiv
 #### A.3 Validation Images
 
 <p align="center">
-  <img  height="400" src="./images/limitations_01.png"/>   
+  <img src="./images/limitations_01.png"/>   
   Figure A.X. 
 </p>
     
 <p align="center">
-  <img  height="300" src="./images/limitations_02.png"/>       
+  <img src="./images/limitations_02.png"/>       
   Figure A.X. 
 </p>
