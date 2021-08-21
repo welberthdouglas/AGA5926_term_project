@@ -45,7 +45,6 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 ### 5. Future Work
 - changes in architecture to get a network more suitable to reduce noise at the same time that it increases resolution
-- cite paper solar denoising and its references, maybe use a hybrid architecture with noise reduction capabilities
 - Evaluate generator on more diverse objects, not only galaxies
 - check for consistency using other metrics other than PSNR.
 - Different loss function
@@ -57,6 +56,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 ### 6. References
 
+[Baso et al. 2019](https://arxiv.org/abs/1908.02815) Solar image denoising with convolutional neural networks.
 [Goodfelow et al. 2014.](https://arxiv.org/abs/1406.2661) Generative Adversarial Networks.   
 [Ledig et al. 2017.](https://arxiv.org/abs/1609.04802) Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network.   
 [Li et al. 2021.](https://arxiv.org/abs/2010.06608) AI-assisted super-resolution cosmological simulations.   
