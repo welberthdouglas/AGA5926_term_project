@@ -60,11 +60,11 @@ The figure X bellow show a sample of the train images along with the respective 
 #### A.3 Validation Images
 
 <p align="center">
-  <img  height="300" src="./images/limitations_01.png"/>
+  <img  height="400" src="./images/limitations_01.png"/>   
   Figure X. 
 </p>
 
 <p align="center">
-  <img  height="300" src="./images/limitations_02.png"/>
+  <img  height="300" src="./images/limitations_02.png"/>    
   Figure X. 
 </p>
