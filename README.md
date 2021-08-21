@@ -16,7 +16,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 #### 2.2 Network Architecture
 <p align="center">
-  <img  height="400" src="./images/schematics.png"/>   
+  <img  height="300" src="./images/schematics.png"/>   
   Figure 2.X. 
 </p>
 
@@ -30,7 +30,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 </p>
 
 <p align="center">
-  <img  height="200" src="./images/histogram.png"/>   
+  <img  height="250" src="./images/histogram.png"/>   
   Figure 3.X. 
 </p>
 
