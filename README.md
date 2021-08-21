@@ -57,10 +57,10 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 ### 6. References
 
-[Schawinski et al. 2017.](https://academic.oup.com/mnrasl/article/467/1/L110/2931732) Generative adversarial networks recover features in astrophysical images of galaxies beyond the deconvolution limit.   
-[Ledig et al. 2017.](https://arxiv.org/abs/1609.04802) Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network.   
 [Goodfelow et al. 2014.](https://arxiv.org/abs/1406.2661) Generative Adversarial Networks.   
+[Ledig et al. 2017.](https://arxiv.org/abs/1609.04802) Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network.   
 [Li et al. 2021.](https://arxiv.org/abs/2010.06608) AI-assisted super-resolution cosmological simulations.   
+[Schawinski et al. 2017.](https://academic.oup.com/mnrasl/article/467/1/L110/2931732) Generative adversarial networks recover features in astrophysical images of galaxies beyond the deconvolution limit.   
 [Zingales and Waldmann. 2018.](https://arxiv.org/abs/1806.02906) ExoGAN: Retrieving Exoplanetary Atmospheres Using Deep Convolutional Generative Adversarial Networks.   
 
 ### 7. Appendix
