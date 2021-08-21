@@ -53,30 +53,30 @@ Several factors contribute to noise in astronomical images. Random noise from th
 ### 7. Appendix
 #### A.1 Validation Images
 
-The figure X bellow show the validation images along with the respective generated images and images from legacy survey. All objects selected to the validation set in were chosen randomly from the original collected objects.
+The figure A.X bellow show the validation images along with the respective generated images and images from legacy survey. All objects selected to the validation set in were chosen randomly from the original collected objects.
 
 <p align="center">
   <img  width="1000" src="./images/validation.png"/>
-  Figure X. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
+  Figure A.X. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
 </p>
 
 #### A.2 Sample of Train Images
 
-The figure X bellow show a sample of the train images along with the respective generated images and images from legacy survey.
+The figure A.X bellow show a sample of the train images along with the respective generated images and images from legacy survey.
 
 <p align="center">
   <img  width="1000" src="./images/train.png"/>
-  Figure X. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
+  Figure A.X. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
 </p>
 
 #### A.3 Validation Images
 
 <p align="center">
   <img  height="400" src="./images/limitations_01.png"/>   
-  Figure X. 
+  Figure A.X. 
 </p>
     
 <p align="center">
   <img  height="300" src="./images/limitations_02.png"/>       
-  Figure X. 
+  Figure A.X. 
 </p>
