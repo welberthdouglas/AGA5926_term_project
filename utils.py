@@ -140,11 +140,14 @@ def plot_GRZ_histogram(fits_data:np.array, xscale:str="log", figsize = (15,5), b
     """
     
     fig,ax = plt.subplots(1,figsize=figsize)
-    for i,band,color in zip(range(3),["G","R","Z"],["blue","green","red"]):
+    for i,band,color in zip(range(3),["g","r","z"],["royalblue","darkcyan","indianred"]):
         histogram, bin_edges = np.histogram(fits_data[:,:,i], bins=bins)
-        ax.plot(bin_edges[0:-1], histogram, label=band, color=color)
+        ax.plot(bin_edges[0:-1], histogram, label=band, color=color,linewidth=1)
+        ax.set_xlabel("pixel value", fontsize=12);
+        ax.set_ylabel("count                  ",rotation =0, fontsize=12);
     ax.set_xscale(xscale)
-    ax.legend(loc="upper right",prop={'size': 15}, title="Band");
+    ax.set_xlim([0, 1]);
+    ax.legend(loc="upper right",prop={'size': 12}, title="Band");
 
 def asinh_shrinkage(fits_data:np.array, mult:float=10,den:float=3)->np.array:
     """
