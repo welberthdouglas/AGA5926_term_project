@@ -56,3 +56,15 @@ The figure X bellow show a sample of the train images along with the respective 
   <img  width="1000" src="./images/train.png"/>
   Figure X. Left - SPLUS original image, Center - image enhanced using the trained generatod, Right - image from the same object from Legacy Survey
 </p>
+
+#### A.3 Validation Images
+
+<p align="center">
+  <img  height="300" src="./images/limitations_01.png"/>
+  Figure X. 
+</p>
+
+<p align="center">
+  <img  height="300" src="./images/limitations_02.png"/>
+  Figure X. 
+</p>
