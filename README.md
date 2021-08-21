@@ -20,21 +20,25 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 ### 3. Results
 
-### 3. Discussion and Conclusions
+### 3.X Limitations
 
-### 4. Future Work
+### 4. Discussion and Conclusions
+
+### 5. Future Work
 - changes in architecture to get a network more suitable to reduce noise at the same time that it increases resolution
 - cite paper solar denoising and its references, maybe use a hybrid architecture with noise reduction capabilities
 - Evaluate generator on more diverse objects, not only galaxies
-- check for consistency using other metrics apart from SNR.
+- check for consistency using other metrics other than PSNR.
 - Different loss function
 - Features from a different model (not VGG)
 - Check which vgg features get activated with galaxies images
 - Low frequency artifacts might be caused by the generator trying to mimic legacy images' noise (it is a good idea to check if sone feature in VGG is activated by noise in images)
+- Train with images with more consistent amount of noise
+- Adjust preprocessing to decrease input noise
 
-### 5. References
+### 6. References
 
-### 6. Appendix
+### 7. Appendix
 #### A.1 Validation Images
 
 The figure X bellow show the validation images along with the respective generated images and images from legacy survey. All objects selected to the validation set in were chosen randomly from the original collected objects.
