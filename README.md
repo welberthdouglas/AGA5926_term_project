@@ -89,6 +89,10 @@ Several factors contribute to noise in astronomical images. Random noise from th
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It can be noticed that for the sampled images, the super-resolution generated images (SPLUS - SR) present good similarities with the real ones from LEGACY and that the SRGAN was able to remove most of the noise present in the original images without removing most of the features in the images.
 </p>
 
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To evaluate the generator quantitatively, we used the peak signal to noise ratio metric (PSNR). This metric is often used to measure information loss in compressed images and measures the proximity of a noisy image in comparison with a baseline image. Given two images <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;I" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;I" title="\large I" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;K" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;K" title="\large K" /></a> of sizes (ixj pixels), the PSNR is defined as follows:
+</p>
+
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=MSE&space;=&space;\frac{1}{m&space;\cdot&space;n}\sum_{i=0}^{m-1}\sum_{j=0}^{n-1}\left&space;[&space;I(i,j)&space;-&space;K(i,j)&space;\right&space;]^{2}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?MSE&space;=&space;\frac{1}{m&space;\cdot&space;n}\sum_{i=0}^{m-1}\sum_{j=0}^{n-1}\left&space;[&space;I(i,j)&space;-&space;K(i,j)&space;\right&space;]^{2}" title="MSE = \frac{1}{m \cdot n}\sum_{i=0}^{m-1}\sum_{j=0}^{n-1}\left [ I(i,j) - K(i,j) \right ]^{2}" />
 </a>
