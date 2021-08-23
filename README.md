@@ -103,8 +103,9 @@ Several factors contribute to noise in astronomical images. Random noise from th
  </a>
 </p>
 
-
-
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Table 3.1 below shows the average peak signal to noise ratio for the images in the validation set, using as baseline the real LEGACY images. The results show that the SRGAN is able to increase the PSNR of SPLUS images in 6.49 decibels on average and that the performance is homogeneous within different bands.
+</p>
 
 <p align="center">
   Table 3.1. 
