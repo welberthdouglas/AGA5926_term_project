@@ -62,7 +62,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 #### 2.2 Data
 
 <p align="justify">
-To train the network we used images of objects in common between the S-PLUS and LEGACY survey. All images are from galaxies in the STRIPE82 region obtained from FITS images in the g, r, and z bands from both surveys where the resolution of S-PLUS images is 128x128 pixels and the resolution of LEGACY images is 256x256 pixels. The galaxies were selected visually trying to get an even distribution of samples from all the available regions. We also tried to avoid saturated stars and galaxies where images from S-PLUS had low quality. We selected 150 images in total, from which 25 were used for validation only and were not used in the network training.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To train the network we used images of objects in common between the S-PLUS and LEGACY survey. All images are from galaxies in the STRIPE82 region obtained from FITS images in the g, r, and z bands from both surveys where the resolution of S-PLUS images is 128x128 pixels and the resolution of LEGACY images is 256x256 pixels. The galaxies were selected visually trying to get an even distribution of samples from all the available regions. We also tried to avoid saturated stars and galaxies where images from S-PLUS had low quality. We selected 150 images in total, from which 25 were used for validation only and were not used in the network training.
 </p>
 
 <p align="justify">
@@ -70,7 +70,7 @@ To train the network we used images of objects in common between the S-PLUS and 
 </p>
 
 <p align="justify">
-To increase the number of training samples we collected randomly offset images of all 125 training objects summing a total of 250 images. Those images were then mirrored, flipped upside down, and rotated by 90 degrees. With this data augmentation process, we were able to increase the training sample eightfold from 125 to 1000 images.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To increase the number of training samples we collected randomly offset images of all 125 training objects summing a total of 250 images. Those images were then mirrored, flipped upside down, and rotated by 90 degrees. With this data augmentation process, we were able to increase the training sample eightfold from 125 to 1000 images.
 </p>
 
 
