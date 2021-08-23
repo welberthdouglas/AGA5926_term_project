@@ -13,7 +13,11 @@ Several factors contribute to noise in astronomical images. Random noise from th
 ### 1. Introduction
 
 <p align="justify">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Since the introduction of Generative Adversarial Networks by Goodfelow et al. (2014), we observed the development of several uses of GANs in fields ranging from finances, to arts; In particular, there were expressive developments in computer vision that lead to uses in astronomy in the last years. GANs have been used to retrieve galaxy features (Schawinski et al., 2017),  to retrieve exoplanetary atmospheres (Zingales and Waldmann., 2018), and to enhance cosmological simulations (Ullmo et al. 2020; Li et al., 2020) to cite a few use cases.    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Several factors contribute to noise in astronomical images: Random noise from the sky background, the telescope's detector and its optical system, and data modifications during preprocessing handling are examples of elements that play a part to build noise in images. Although there are known ways to decrease images' noise, such as bigger exposure times, totally removing the noise is virtually impossible. Furthermore, in some applications, increasing exposure times could mean reducing the covered field significantly. The noise present in images can have a big impact on its overall characteristics. Images with a low signal-to-noise ratio are notably difficult to study as structures such as galaxies' spiral arms, and other features may get lost in the noise, making its detection and analysis harder. 
+
+
+
+Since the introduction of Generative Adversarial Networks by Goodfelow et al. (2014), we observed the development of several uses of GANs in fields ranging from finances, to arts; In particular, there were expressive developments in computer vision that lead to uses in astronomy in the last years. GANs have been used to retrieve galaxy features (Schawinski et al., 2017),  to retrieve exoplanetary atmospheres (Zingales and Waldmann., 2018), and to enhance cosmological simulations (Ullmo et al. 2020; Li et al., 2020) to cite a few use cases.    
 This project builds upon the work done by Schawinski et al. (2017) and attempts to achieve similar results using SPLUS and Legacy surveys' data. However, in opposition with the cited paper, we will not artificially add noise to simulate shallower images. Instead, we will use data from the same object taken by two surveys with different depths; In this way, we expect the algorithm to better learn the correspondence between the features of real images.
 </p>
 
