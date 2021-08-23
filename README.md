@@ -59,7 +59,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The architecture of the generator and the discriminator networks used in this work is very similar to the architecture proposed in (Ledig et. al.,2017) with minor changes to accommodate different input sizes and upscale factors. We also modified the upsampling interpolation method to bilinear since it gave better results and removed almost completely the high-frequency artifacts known as checkerboard pattern that was present in the first training interations.
 </p>
 
-#### 2.2 Train Data
+#### 2.2 Data
 
 ### 3. Results
 
