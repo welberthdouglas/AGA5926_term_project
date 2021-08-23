@@ -76,6 +76,15 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 ### 3. Results
 
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The SRGAN was trained for 500 epochs due to time restrictions, at this point, the training losses were still decreasing, albeit slowly.  To evaluate the network, the images generated using the validation set were evaluated both qualitatively and quantitatively. The qualitative check was made visually comparing the generated images with the real images from LEGACY survey. Figure 3.1 shows a sample of images from the validation set and compares original S-PLUS images with generated and LEGACY images.
+</p>
+
+<p align="center">
+  <img src="./images/validation_images.png"/>   
+  Figure 3.1. 
+</p>
+
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=MSE&space;=&space;\frac{1}{m&space;\cdot&space;n}\sum_{i=0}^{m-1}\sum_{j=0}^{n-1}\left&space;[&space;I(i,j)&space;-&space;K(i,j)&space;\right&space;]^{2}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?MSE&space;=&space;\frac{1}{m&space;\cdot&space;n}\sum_{i=0}^{m-1}\sum_{j=0}^{n-1}\left&space;[&space;I(i,j)&space;-&space;K(i,j)&space;\right&space;]^{2}" title="MSE = \frac{1}{m \cdot n}\sum_{i=0}^{m-1}\sum_{j=0}^{n-1}\left [ I(i,j) - K(i,j) \right ]^{2}" />
 </a>
@@ -87,10 +96,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 </p>
 
 
-<p align="center">
-  <img src="./images/validation_images.png"/>   
-  Figure 3.X. 
-</p>
+
 
 <p align="center">
   Table 3.1. 
@@ -101,7 +107,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 <p align="center">
   <img src="./images/histogram.png"/>   
-  Figure 3.X. 
+  Figure 3.2. 
 </p>
 
 ### 4. Discussion and Conclusions
