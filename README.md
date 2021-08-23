@@ -57,8 +57,9 @@ Where <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;I^{HR}" t
 
 #### 2.2 Network Architecture
 
-The architecture of the generator and the discriminator networks used in this work is very similar to the architecture proposed in (Ledig et. al.,2017) with minor changes to accommodate different input sizes and upscale factors. We also modified the upsampling interpolation method to bilinear since it gave better results and removed almost completly the high frequency artifacts known as checkerboard pattern.
-
+<p align="justify">
+The architecture of the generator and the discriminator networks used in this work is very similar to the architecture proposed in (Ledig et. al.,2017) with minor changes to accommodate different input sizes and upscale factors. We also modified the upsampling interpolation method to bilinear since it gave better results and removed almost completely the high-frequency artifacts known as checkerboard pattern present in the first training iterations.
+</p>
 
 #### 2.3 Train Data
 
