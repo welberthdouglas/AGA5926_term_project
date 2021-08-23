@@ -82,7 +82,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 <p align="center">
   <img src="./images/validation_images.png"/>   
-  Figure 3.1. 
+  Figure 3.1. Sample images of galaxies from the validation set. Top: Original S_PLUS images; Midle: Generated images; Bottom: LEGACY images
 </p>
 
 <p align="justify">
@@ -116,7 +116,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 <p align="center">
   <img src="./images/histogram.png"/>   
-  Figure 3.2. 
+  Figure 3.2. Sample histograms of images in the validation set. 
 </p>
 
 ### 4. Discussion and Conclusions
