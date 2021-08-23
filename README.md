@@ -27,7 +27,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 #### 2.1 Generative Adversarial Networks
 
- <p align="justify">
+<p align="justify">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generative Adversarial Networks are a class of machine learning frameworks in which two neural networks are trained simultaneously against each other: A generator that tries to build increasingly realistic examples and a discriminator that increasingly gets better at identifying generated samples from real ones. The general goal of training a GAN is to create a generator that would output realistic examples of the objects of interest at the end of training. In the specific case of images, the generator could have different uses depending on its definition: it could create realistic face images using n-dimensional vectors as in style-GAN (Karras et. al., 2019), or it could transform images from one style to another (Isola et. al., 2018). In the case of SRGANs, the architecture used in this work, the purpose of the generator is to increase the resolution of the input image as introduced by Ledig et. al (2017). Figure 2.1 below shows the overall structure of the networks used in this work.
 </p>
 
@@ -36,6 +36,13 @@ Several factors contribute to noise in astronomical images. Random noise from th
   Figure 2.1. SRGAN general structure used in this work.
 </p>
 
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initially, a low-resolution image (128x128 SPLUS original image) is input to the generator. The generator, through a series of convolutions and residual operations, transforms this image into a super-resolution image of size 256 x 256 pixels. The generated image is then given as an input to the discriminator training along with the real high-resolution image (256 x 256 LEGACY survey image of the same object). A Loss function is calculated using the output tensor of the discriminator as well as a feature representation of the image created using a pre-trained VGG19 network. After this phase, the weights and biases of the discriminator are updated, and it gets better at differentiating between generated and real images.
+</p>
+
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In a second phase, the loss function is used to update the weights and biases of the generator via backpropagation. After this step, the generator gets better at creating 256x256 images from a 128x128 input, it effectively gets better at fooling the discriminator. This training process repeats for each iteration and is known to be inherently unstable, because of that, hyperparameters, the network's architecture, and the training process should be finely tuned to avoid divergence and possible collapse during the training.
+</p>
 - Say that upsampling with bilinear interpolation eliminated almost completly the high frequency artifacts (checkerboard pattern).
 
 <p align="center">
