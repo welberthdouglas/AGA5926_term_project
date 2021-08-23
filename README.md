@@ -33,7 +33,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 <p align="center">
   <img  src="./images/schematics.png"/>   
-  Figure 2.1. 
+  Figure 2.1. SRGAN general structure used in this work.
 </p>
 
 - Say that upsampling with bilinear interpolation eliminated almost completly the high frequency artifacts (checkerboard pattern).
