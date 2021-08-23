@@ -108,7 +108,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 </p>
 
 <p align="center">
-  Table 3.1. 
+  Table 3.1. Average PSNR for all images in the validation set.
 </p>
 <p align="center">
   <img height = "180" src="./images/PSNR.png"/>   
