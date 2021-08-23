@@ -130,7 +130,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 </p>
 
 <p align="justify">
-For most examples, the generated images are very similar to the real LEGACY objects. However, we observed unnatural features and colors in some of the generated images as well as a repeating pattern that is present in all generated samples. Those defects could be originated due to several factors ranging from network architecture and training to input image quality. It is worth keeping in mind that the present SRGAN was trained for only 500 epochs while similar works in SRGANs suggest training for 30000 to 50000 epochs to achieve optimal results.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For most examples, the generated images are very similar to the real LEGACY objects. However, we observed unnatural features and colors in some of the generated images as well as a repeating pattern that is present in all generated samples. Those defects could be originated due to several factors ranging from network architecture and training to input image quality. It is worth keeping in mind that the present SRGAN was trained for only 500 epochs while similar works in SRGANs suggest training for 30000 to 50000 epochs to achieve optimal results.
 </p>
 
 ### 5. Future Work
