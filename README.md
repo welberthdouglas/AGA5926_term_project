@@ -49,7 +49,9 @@ Several factors contribute to noise in astronomical images. Random noise from th
 </a>
 </p>
 
-Where <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;I^{HR}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;I^{HR}" title="\large I^{HR}" /></a> is an high-resolution image.
+<p align="center">
+Where <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;I^{HR}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;I^{HR}" title="\large I^{HR}" /></a> is an high-resolution image, <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;I^{LR}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;I^{LR}" title="\large I^{LR}" /></a> is a low-resolution image and <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;D_{\theta&space;_{D}}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;D_{\theta&space;_{D}}" title="\large D_{\theta _{D}}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;D_{\theta&space;_{D}}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;D_{\theta&space;_{D}}" title="\large D_{\theta _{D}}" /></a> are the discriminator and the generator networks respectively
+</p>
 
 is known to be inherently unstable, because of that, hyperparameters, the network's architecture, and the training process should be finely tuned to avoid divergence and possible collapse during the training.
 
