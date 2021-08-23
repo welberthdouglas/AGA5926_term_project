@@ -126,7 +126,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 ### 4. Discussion and Conclusions
 
 <p align="justify">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We were able to achieve an average PSNR of 26.08 dB in the validation set. This result was achieved while increasing the image resolution by a factor of 2 using real images for both low-resolution and high-resolution images. This result is in line with the one achieved by Schawinski et. al. (2017) where they reached values of PSNR ranging from 36.2 dB to 20.0 dB depending on the intensity of the applied synthetic noise.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We were able to achieve an average PSNR of 26.08 dB in the validation set. This result was achieved while increasing the image resolution by a factor of 2 using real images for both low-resolution and high-resolution images. These peak signal to noise ratios are in line with the ones obtained by Schawinski et. al. (2017) where they reached values of PSNR ranging from 36.2 dB to 20.0 dB depending on the intensity of the applied synthetic noise.
 </p>
 
 
