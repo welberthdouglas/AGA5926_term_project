@@ -86,7 +86,7 @@ Several factors contribute to noise in astronomical images. Random noise from th
 </p>
 
 <p align="justify">
-It can be noticed that for the sampled images, the super-resolution generated images (SPLUS - SR) present good similarities with the real ones from LEGACY and that the SRGAN was able to remove most of the noise present in the original images without removing most of the features in the images.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It can be noticed that for the sampled images, the super-resolution generated images (SPLUS - SR) present good similarities with the real ones from LEGACY and that the SRGAN was able to remove most of the noise present in the original images without removing most of the features in the images.
 </p>
 
 <p align="center">
