@@ -41,13 +41,17 @@ Several factors contribute to noise in astronomical images. Random noise from th
 </p>
 
 <p align="justify">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In a second phase, the loss function is used to update the weights and biases of the generator via backpropagation. After this step, the generator gets better at creating 256x256 images from a 128x128 input, it effectively gets better at fooling the discriminator. This training process repeats for each iteration and is known to be inherently unstable, because of that, hyperparameters, the network's architecture, and the training process should be finely tuned to avoid divergence and possible collapse during the training.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In a second phase, the loss function is used to update the weights and biases of the generator via backpropagation. After this step, the generator gets better at creating 256x256 images from a 128x128 input, it effectively gets better at fooling the discriminator. This training process repeats for each iteration and consists in solving the min-max adversarial problem defined by the equation shown bellow.
 </p>
 
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;min_{\theta&space;_{G}}max_{\theta&space;_{D}}\mathbb{E}_{I^{HR}\sim&space;p_{train}\left&space;(&space;I^{HR}&space;\right&space;)}\left&space;[&space;log&space;D_{\theta&space;_{D}}\left&space;(&space;I^{HR}&space;\right&space;)&space;\right&space;]&plus;\mathbb{E}_{I^{LR}\sim&space;p_{G}\left&space;(&space;I^{LR}&space;\right&space;)}\left&space;[&space;log\left&space;(&space;1-&space;D_{\theta&space;_{D}}\left&space;(G_{\theta_{G}}&space;I^{LR}&space;\right&space;)\right&space;)&space;\right&space;]" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;min_{\theta&space;_{G}}max_{\theta&space;_{D}}\mathbb{E}_{I^{HR}\sim&space;p_{train}\left&space;(&space;I^{HR}&space;\right&space;)}\left&space;[&space;log&space;D_{\theta&space;_{D}}\left&space;(&space;I^{HR}&space;\right&space;)&space;\right&space;]&plus;\mathbb{E}_{I^{LR}\sim&space;p_{G}\left&space;(&space;I^{LR}&space;\right&space;)}\left&space;[&space;log\left&space;(&space;1-&space;D_{\theta&space;_{D}}\left&space;(G_{\theta_{G}}&space;I^{LR}&space;\right&space;)\right&space;)&space;\right&space;]" title="\large min_{\theta _{G}}max_{\theta _{D}}\mathbb{E}_{I^{HR}\sim p_{train}\left ( I^{HR} \right )}\left [ log D_{\theta _{D}}\left ( I^{HR} \right ) \right ]+\mathbb{E}_{I^{LR}\sim p_{G}\left ( I^{LR} \right )}\left [ log\left ( 1- D_{\theta _{D}}\left (G_{\theta_{G}} I^{LR} \right )\right ) \right ]" />
 </a>
 </p>
+
+Where <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;I^{HR}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;I^{HR}" title="\large I^{HR}" /></a> is an high-resolution image.
+
+is known to be inherently unstable, because of that, hyperparameters, the network's architecture, and the training process should be finely tuned to avoid divergence and possible collapse during the training.
 
 #### 2.2 Network Architecture
 
