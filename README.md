@@ -66,11 +66,7 @@ To train the network we used images of objects in common between the S-PLUS and 
 </p>
 
 <p align="justify">
-To match exactly the field of view in images from both surveys we had to downsample the images from the LEGACY survey, this was achieved by changing the pixscale parameter to 0.277 in the LEGACY API.
-</p>
-
-<p align="justify">
-The preprocessing of images consisted of an asinh shrinkage and a normalization. The shrinkage was in form <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;arcsinh((10\cdot&space;x)/3)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;arcsinh((10\cdot&space;x)/3)" title="\large arcsinh((10\cdot x)/3)" /></a> for S-PLUS images and  <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;arcsinh((100\cdot&space;x)/3)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;arcsinh((100\cdot&space;x)/3)" title="\large arcsinh((100\cdot x)/3)" /></a> for LEGACY images. These constants were chosen in order to make the images from both surveys look as similar as possible. The min-max normalization assured pixel values would fall within the [0,1] interval before images were introduced in the network.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The preprocessing of images consisted of an asinh shrinkage and a normalization. The shrinkage was in form <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;arcsinh((10\cdot&space;x)/3)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;arcsinh((10\cdot&space;x)/3)" title="\large arcsinh((10\cdot x)/3)" /></a> for S-PLUS images and  <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;arcsinh((100\cdot&space;x)/3)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;arcsinh((100\cdot&space;x)/3)" title="\large arcsinh((100\cdot x)/3)" /></a> for LEGACY images. These constants were chosen in order to make the images from both surveys look as similar as possible. The min-max normalization assured pixel values would fall within the [0,1] interval before images were introduced in the network. To match exactly the field of view in images from both surveys we had to downsample the images from the LEGACY survey, this was achieved by changing the pixscale parameter to 0.277 in the LEGACY API.
 </p>
 
 
