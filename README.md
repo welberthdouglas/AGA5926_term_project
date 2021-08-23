@@ -129,6 +129,9 @@ Several factors contribute to noise in astronomical images. Random noise from th
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We were able to achieve an average PSNR of 26.08 dB in the validation set. This result was achieved while increasing the image resolution by a factor of 2 using real images for both low-resolution and high-resolution images. These peak signal to noise ratios are in line with the ones obtained by Schawinski et. al. (2017) where they reached values of PSNR ranging from 36.2 dB to 20.0 dB depending on the intensity of the applied synthetic noise.
 </p>
 
+<p align="justify">
+For most examples, the generated images are very similar to the real LEGACY objects. However, we observed unnatural features and colors in some of the generated images as well as a repeating pattern that is present in all generated samples. Those defects could be originated due to several factors ranging from network architecture and training to input image quality. It is worth keeping in mind that the present SRGAN was trained for only 500 epochs while similar works in SRGANs suggest training for 30000 to 50000 epochs to achieve optimal results.
+</p>
 
 ### 5. Future Work
 - changes in architecture to get a network more suitable to reduce noise at the same time that it increases resolution
