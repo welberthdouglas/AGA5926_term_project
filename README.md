@@ -61,6 +61,14 @@ Several factors contribute to noise in astronomical images. Random noise from th
 
 #### 2.2 Data
 
+<p align="justify">
+To train the network we used images of objects in common between the S-PLUS and LEGACY survey. All images are from galaxies in the STRIPE82 region obtained from FITS images in the g, r, and z bands from both surveys where the resolution of S-PLUS images is 128x128 pixels and the resolution of LEGACY images is 256x256 pixels. The galaxies were selected visually trying to get an even distribution of samples from all the available regions. We also tried to avoid saturated stars and galaxies where images from S-PLUS had low quality. We selected 150 images in total, from which 25 were used for validation only and were not used in the network training.
+</p>
+
+<p align="justify">
+To match exactly the field of view in images from both surveys we had to downsample the images from the LEGACY survey, this was achieved by changing the pixscale parameter to 0.277 in the LEGACY API.
+</p>
+
 ### 3. Results
 
 <p align="center">
