@@ -7,7 +7,7 @@
 </div>
 
 <p align="justify">
-Several factors contribute to noise in astronomical images. Random noise from the sky background, the telescope detector and optical system play a part to build noise in images that can make it difficult to identify and study structures. Schawinski et al. 2017 showed the potential of GANs for noise reduction and recovery of galaxy features for images artificially degraded [add solar denoise paper here]. In this project[work] we will use SRGANs to increase image quality (pixel density and signal to noise ratio) of S-PLUS survey images using deeper images of the same objects from Legacy survey as a baseline for training. Preliminary results were qualitatively evaluated and show good concordance with legacy survey images.
+Many are the factors that contribute to noise in astronomical images, and although there are some natural ways of increasing signal to noise ratio, such as increasing exposure time, the noise will always be present.  In this work, we trained a super resolution generative adversarial network aiming at reducing S-PLUS survey images noise and increasing the resolution of the images by a factor of 2. We used galaxy images from S-PLUS STRIPE82 and deeper images of the same objects from LEGACY survey in the g,r, and z bands. We were able to achieve a good similarity between generated images and real images from LEGACY survey and an average peak signal to noise ratio of 26.08 dB in the validation set.
 </p>
 
 ### 1. Introduction
