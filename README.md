@@ -134,15 +134,10 @@ Several factors contribute to noise in astronomical images. Random noise from th
 </p>
 
 ### 5. Future Work
-- changes in architecture to get a network more suitable to reduce noise at the same time that it increases resolution
-- Evaluate generator on more diverse objects, not only galaxies
-- check for consistency using other metrics other than PSNR.
-- Different loss function
-- Features from a different model (not VGG)
-- Check which vgg features get activated with galaxies images
-- Low frequency artifacts might be caused by the generator trying to mimic legacy images' noise (it is a good idea to check if sone feature in VGG is activated by noise in images)
-- Train with images with more consistent amount of noise
-- Adjust preprocessing to decrease input noise
+
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For future works it is suggested: Experimenting with different architectures that could be more suitable to the task of reducing noise at the same time that it increases images resolution; Experiment with different loss functions; Checking which features in the VGG network get activated with the astronomical images and make sure this pre-trained network is suitable for this specific case; Develop a more consistent preprocessing method that would result in a more homogeneous noise distribution between images, and finally expanding the training images to more diverse objects.
+</p>
 
 ### 6. References
 
