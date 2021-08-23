@@ -114,6 +114,10 @@ Several factors contribute to noise in astronomical images. Random noise from th
   <img height = "180" src="./images/PSNR.png"/>   
 </p>
 
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The noise reduction can be further visualized in the histograms of the images showed in Figure 3.2
+</p>
+
 <p align="center">
   <img src="./images/histogram.png"/>   
   Figure 3.2. Sample histograms of images in the validation set. 
