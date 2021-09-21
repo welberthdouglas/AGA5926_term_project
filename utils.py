@@ -83,7 +83,7 @@ def download_data(coords:list,save_path:str,train_samples:int=125, offset_aug:bo
         get_fits_legacy(ra,dec,save_path+"validation/")
     print("Done!")
     
-def sample_fits(data_dir:str, batch_size:int) -> tuple:
+def sample_fits(data_dir:str, batch_size:int, all_flag:bool=False) -> tuple:
     """
     gets fits data with size batch_size from directory data_dir and returns a tuple of lists 
     with data from splus and legacy 
@@ -93,8 +93,12 @@ def sample_fits(data_dir:str, batch_size:int) -> tuple:
     all_splus_fits = glob.glob(data_dir + "*SPLUS*")
 
     # Choose a random batch of SPLUS files and get its LEGACY counterparts
-    fits_splus_batch = np.random.choice(all_splus_fits, size=batch_size, replace=False)
+    if all_flag:
+        fits_splus_batch = all_splus_fits
+    else:
+        fits_splus_batch = np.random.choice(all_splus_fits, size=batch_size, replace=False)
     fits_legacy_batch = np.array([i.replace("SPLUS","LEGACY") for i in fits_splus_batch])
+   
 
     splus_fits_data = []
     legacy_fits_data = []
@@ -200,20 +204,21 @@ def fits_processing(fits_data:np.array, mult:float=10)->np.array:
     
     return normalize(shrinked)
 
-def fits2images(data_dir, images_dir):
-    train_splus_fits, train_legacy_fits, train_coords = sample_fits(data_dir+"train/",250)
-    val_splus_fits, val_legacy_fits, val_coords = sample_fits(data_dir+"validation/",25)
+def fits2images(data_dir, images_dir, trainsize, validationsize, all_flag=False):
+    
+    train_splus_fits, train_legacy_fits, train_coords = sample_fits(data_dir+"train/",trainsize,all_flag)
+    val_splus_fits, val_legacy_fits, val_coords = sample_fits(data_dir+"validation/",validationsize,all_flag)
     
     train_splus_images,train_legacy_images = fits_processing(train_splus_fits),fits_processing(train_legacy_fits)
     val_splus_images,val_legacy_images = fits_processing(val_splus_fits),fits_processing(val_legacy_fits)
 
     print("saving training images ...")
-    for i in tqdm(range(250)):
+    for i in tqdm(range(train_splus_fits.shape[0])):
         plt.imsave(images_dir+f'train/RA_{train_coords[i][0]}_DEC_{train_coords[i][1]}_SPLUS.png',train_splus_images[i])
         plt.imsave(images_dir+f'train/RA_{train_coords[i][0]}_DEC_{train_coords[i][1]}_LEGACY.png',train_legacy_images[i])
     
     print("saving validation images ...")
-    for i in tqdm(range(25)):
+    for i in tqdm(range(val_splus_fits.shape[0])):
 
         plt.imsave(images_dir+f'validation/RA_{val_coords[i][0]}_DEC_{val_coords[i][1]}_SPLUS.png',val_splus_images[i])
         plt.imsave(images_dir+f'validation/RA_{val_coords[i][0]}_DEC_{val_coords[i][1]}_LEGACY.png',val_legacy_images[i])
