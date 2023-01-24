@@ -7,7 +7,7 @@
 </div>
 
 <p align="justify">
-Many are the factors that contribute to noise in astronomical images, and although there are some natural ways of increasing signal to noise ratio, such as increasing exposure time, the noise will always be present.  In this work, we trained a super resolution generative adversarial network aiming at reducing S-PLUS survey images noise and increasing the resolution of the images by a factor of 2. We used galaxy images from S-PLUS STRIPE82 and deeper images of the same objects from LEGACY survey in the g,r, and z bands. We were able to achieve a good similarity between generated images and real images from LEGACY survey and an average peak signal to noise ratio of 26.08 dB in the validation set.
+Many factors contribute to noise in astronomical images. While some natural methods exist to increase the signal-to-noise ratio, such as increasing exposure time, noise will always remain. In this work, we trained a super resolution generative adversarial network to reduce S-PLUS survey image noise and increase resolution by a factor of two. We used galaxy images from S-PLUS STRIPE82 and deeper images of the same objects from the LEGACY survey in the g, r, and z bands. We achieved a good similarity between generated images and real images from the LEGACY survey, with an average peak signal-to-noise ratio of 26.08 dB in the validation set.
 </p>
 
 ### 1. Introduction
